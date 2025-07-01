@@ -1,0 +1,2 @@
+# GDENG01-Game-Jam-2
+AY 2024-2025, Term 3, GDENG01 Game Jam 2

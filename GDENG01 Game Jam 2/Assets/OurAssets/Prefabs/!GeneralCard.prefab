@@ -156,8 +156,8 @@ MonoBehaviour:
   animator: {fileID: 7429212541304499957}
   id: -1
   name: '-'
-  upright_description: Free spirited and unbothered
-  reversed_description: Reckless and naive
+  upright_description: <Insert Description Here>
+  reversed_description: <Insert Description Here>
   upright: 1
   isSelected: 0
   isFlipped: 0

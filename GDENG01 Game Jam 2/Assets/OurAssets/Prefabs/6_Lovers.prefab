@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 907583670162137530, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
+      propertyPath: id
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 907583670162137530, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
+      propertyPath: name
+      value: The Lovers
+      objectReference: {fileID: 0}
+    - target: {fileID: 907583670162137530, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
+      propertyPath: upright_description
+      value: Relationships with integrity
+      objectReference: {fileID: 0}
+    - target: {fileID: 907583670162137530, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
+      propertyPath: reversed_description
+      value: Discord of relationships
+      objectReference: {fileID: 0}
     - target: {fileID: 2865222479926465093, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

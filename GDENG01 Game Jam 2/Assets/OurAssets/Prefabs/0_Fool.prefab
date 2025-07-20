@@ -14,7 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907583670162137530, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
       propertyPath: name
-      value: Fool
+      value: The Fool
+      objectReference: {fileID: 0}
+    - target: {fileID: 907583670162137530, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
+      propertyPath: upright_description
+      value: 'Free spirited and unbothered '
+      objectReference: {fileID: 0}
+    - target: {fileID: 907583670162137530, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
+      propertyPath: reversed_description
+      value: Reckless and naive
       objectReference: {fileID: 0}
     - target: {fileID: 2863522692283547332, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

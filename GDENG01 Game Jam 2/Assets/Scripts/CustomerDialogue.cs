@@ -23,10 +23,8 @@ public class CustomerDialogue : MonoBehaviour
             TextScript.text = "I would like to ask for a reading on my past present and future";
             DialogueBox.SetActive(true);
 
-            
         }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             DialogueBox.SetActive(false);
         }

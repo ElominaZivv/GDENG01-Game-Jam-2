@@ -3,18 +3,20 @@ using UnityEngine;
 public class TarotCardController : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    [SerializeField] int id;
-    [SerializeField] string name;
-    [SerializeField] string upright_description;
-    [SerializeField] string reversed_description;
-    [SerializeField] bool upright = true;
+    [SerializeField] public int id;
+    [SerializeField] public string name;
+    [SerializeField] public string upright_description;
+    [SerializeField] public string reversed_description;
+    [SerializeField] public bool upright = true;
     [SerializeField] public bool isSelected = false;
-    [SerializeField] bool isFlipped = false;
+    [SerializeField] public bool isFlipped = false;
+
+    [SerializeField] CardRandomizer cardRandomizer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -36,6 +38,11 @@ public class TarotCardController : MonoBehaviour
 
     void OnMouseDown()
     {
-        isFlipped = !isFlipped;
+        if (cardRandomizer.CardNumber < 3)
+        {
+            isFlipped = !isFlipped;
+            cardRandomizer.CardID = id;
+            EventBroadcaster.Instance.PostEvent("CardChosen");
+        }    
     }
 }

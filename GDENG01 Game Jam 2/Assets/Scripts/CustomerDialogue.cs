@@ -12,8 +12,23 @@ public class CustomerDialogue : MonoBehaviour
     void Start()
     {
         DialogueBox.SetActive(false);
+
+        EventBroadcaster.Instance.AddObserver("RightAnswer", RightAnswer);
+        EventBroadcaster.Instance.AddObserver("WrongAnswer", WrongAnswer);
     }
     
+    void RightAnswer()
+    {
+        DialogueBox.SetActive(true);
+        TextScript.text = "Wow! That is totally me. Slay!";
+    }
+
+    void WrongAnswer()
+    {
+        DialogueBox.SetActive(true);
+        TextScript.text = "What are you saying? That's not me!";
+    }
+
     // Update is called once per frame
     void Update()
     {

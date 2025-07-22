@@ -34,8 +34,6 @@ public class LightFlicker : MonoBehaviour
                 childLights.Add(lightData);
             }
         }
-
-        StartCoroutine(Flicker()); //get rid once there is gameplay
     }
 
     void StartFlicker()
@@ -65,6 +63,7 @@ public class LightFlicker : MonoBehaviour
 
         gameObject.SetActive(false);
         EventBroadcaster.Instance.PostEvent("Customer");
+        EventBroadcaster.Instance.PostEvent("spread");
     }
 
     void ResetLight()

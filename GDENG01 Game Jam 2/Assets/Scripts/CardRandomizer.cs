@@ -79,4 +79,9 @@ public class CardRandomizer : MonoBehaviour
         Card3 = ChosenCards[2].GetComponent<TarotCardController>();
         EventBroadcaster.Instance.PostEvent("FlipCard");
     }
+
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver("Restart");
+    }
 }

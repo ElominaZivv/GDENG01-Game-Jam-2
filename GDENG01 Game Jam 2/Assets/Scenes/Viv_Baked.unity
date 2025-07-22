@@ -7592,10 +7592,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4273754106972777303, guid: aa0db172462229347940c5a6a43a22d3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4eb2d480458694743851828813a35bc5, type: 2}
     - target: {fileID: 919132149155446097, guid: aa0db172462229347940c5a6a43a22d3, type: 3}
       propertyPath: m_Name
       value: Antique Globe_low
       objectReference: {fileID: 0}
+    - target: {fileID: 1099233201923212423, guid: aa0db172462229347940c5a6a43a22d3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: aee7828957596774e9fd4efca5955c28, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16304,7 +16312,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 100
-  m_Range: 40
+  m_Range: 2032.2
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -24655,7 +24663,7 @@ Transform:
   m_GameObject: {fileID: 6491630449228325851}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.863873, y: 17.842367, z: -65.739}
+  m_LocalPosition: {x: -43.36, y: 16.272, z: -67.548}
   m_LocalScale: {x: 0.56371397, y: 0.4138279, z: 0.5637138}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24976,7 +24984,7 @@ Transform:
   m_GameObject: {fileID: 1952506124883889861}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 49.77957, y: 34.64692, z: -26.518024}
+  m_LocalPosition: {x: 17.44, y: 18.91, z: -26.52}
   m_LocalScale: {x: 0.56371397, y: 0.5637138, z: 0.56371397}
   m_ConstrainProportionsScale: 0
   m_Children: []

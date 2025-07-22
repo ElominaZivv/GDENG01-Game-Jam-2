@@ -76,7 +76,7 @@ public class LightFlicker : MonoBehaviour
                 data.light.intensity = data.maxIntensity;
             }
         }
-        StartCoroutine(Flicker()); //Get rid once gameplay is added
+        //StartCoroutine(Flicker()); //Get rid once gameplay is added
     }
 
     private void OnDestroy()

@@ -4563,6 +4563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626438660}
   - component: {fileID: 626438659}
+  - component: {fileID: 626438661}
   - component: {fileID: 626438658}
   m_Layer: 0
   m_Name: Tarot Cards
@@ -4649,7 +4650,7 @@ Transform:
   m_GameObject: {fileID: 626438657}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 12.63169, y: -7.3980246, z: -21.623314}
+  m_LocalPosition: {x: 8.28, y: -7.33, z: -19.36}
   m_LocalScale: {x: 9.123926, y: 9.123926, z: 9.123926}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4677,6 +4678,18 @@ Transform:
   - {fileID: 521731415}
   m_Father: {fileID: 926161311}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &626438661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626438657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f253b4ccdce1fb4c840254465276f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &628281579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6437,7 +6450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9083104
+      value: -5.29
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6445,7 +6458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.225311
+      value: -21.68
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6510,6 +6523,14 @@ PrefabInstance:
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_GravityMultiplier
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Radius
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6628,6 +6649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ac16dfa9b848d48b37d19adf2d44e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeToFlicker: 3
 --- !u!1001 &947206205
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -134,9 +134,8 @@ public class ChoiceManager : MonoBehaviour
 
     IEnumerator DelayedAction()
     {
-        yield return new WaitForSeconds(5f);
-
-        EventBroadcaster.Instance.PostEvent("Customer");
+        yield return new WaitForSeconds(7f);
+        EventBroadcaster.Instance.PostEvent("StartFlicker");
     }
 
     private void NewAnswer()

@@ -9260,6 +9260,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4273754106972777303, guid: aa0db172462229347940c5a6a43a22d3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4eb2d480458694743851828813a35bc5, type: 2}
     - target: {fileID: 919132149155446097, guid: aa0db172462229347940c5a6a43a22d3, type: 3}
       propertyPath: m_Name
       value: Antique Globe_low

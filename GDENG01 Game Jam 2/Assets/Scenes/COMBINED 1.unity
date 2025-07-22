@@ -6641,6 +6641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ac16dfa9b848d48b37d19adf2d44e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeToFlicker: 3
 --- !u!1001 &947206205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13969,6 +13970,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.053521864
       objectReference: {fileID: 0}
+    - target: {fileID: 1017289742553951416, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -578
+      objectReference: {fileID: 0}
     - target: {fileID: 1145701662436270513, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -14305,6 +14310,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6777192359758986654, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
+      propertyPath: m_text
+      value: 'Ferocious Industries. (November 8, 2023). PBR Little Games Pack - 4K.
+        https://assetstore.unity.com/packages/3d/props/pbr-little-games-pack-4k-237164
+
+
+        Medieval
+        Flask by Austin Crane (Euclid) - https://sketchfab.com/3d-models/medieval-flask-12c92e2d3bf645178776030d6e45bc1
+
+
+        Monstera
+        Deliciosa Potted Mid-Century plant by Glora - https://sketchfab.com/3d-models/monstera-deliciosa-potted-mid-century-plant-1ab9bf841df04c07b1819be596327629
+
+
+        Crystal
+        Altar by berzerkey - https://sketchfab.com/3d-models/crystal-altar-faf458010ed24e0e908ffff4892013c0
+
+
+        10
+        Skyboxes Pack : Day - Night by Wello Soft https://assetstore.unity.com/packages/2d/textures-materials/sky/10-skyboxes-pack-day-night-32236
+
+
+        Wall
+        Mount Candle (Free) by wolfgar74 - https://sketchfab.com/3d-models/wall-mount-candle-free-526645f841f6424da2c51915b505c20f
+
+
+        Hour
+        Glass by FlukierJupiter - https://sketchfab.com/3d-models/hour-glass-baafc6537f2c4b6696ff0829cc32f772
+
+
+        Crystal
+        Ball by YAnez Designs - https://sketchfab.com/3d-models/crystal-ball-23e1b3d8c0f843e0960c673d932712f2
+
+
+        Medieval
+        props by Lukas Bobor - https://assetstore.unity.com/packages/3d/props/medieval-props-41540
+
+
+        Stylised
+        Fantasy House by Naasz Arts - https://assetstore.unity.com/packages/3d/environments/fantasy/stylised-fantasy-house-257964
+
+
+        Antique
+        Globe by Matthew Collings - https://sketchfab.com/3d-models/antique-globe-78b47132c6be42bcb664545a69b380d9
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6777192359758986654, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 6980411718752312289, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -14445,6 +14501,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 8777346055643935152, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 331339380888039610, guid: 332051913a379ca4cbba58b554f769eb, type: 3}

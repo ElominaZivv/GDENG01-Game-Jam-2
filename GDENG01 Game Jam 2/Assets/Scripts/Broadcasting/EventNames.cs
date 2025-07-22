@@ -6,6 +6,9 @@ using System.Collections;
  * Created By: NeilDG
  */ 
 public class EventNames {
+	
+	public const string OPEN_START_MENU = "OPEN_START_MENU";
+	public const string GAME_START = "GAME_START";
 	public const string ON_UPDATE_SCORE = "ON_UPDATE_SCORE";
 	public const string ON_CORRECT_MATCH = "ON_CORRECT_MATCH";
 	public const string ON_WRONG_MATCH = "ON_WRONG_MATCH";

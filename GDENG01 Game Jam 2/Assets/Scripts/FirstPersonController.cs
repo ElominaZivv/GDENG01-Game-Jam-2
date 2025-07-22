@@ -52,10 +52,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FovKick.Setup(m_Camera);
             m_HeadBob.Setup(m_Camera, m_StepInterval);
             m_StepCycle = 0f;
-            m_NextStep = m_StepCycle/2f;
+            m_NextStep = m_StepCycle / 2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
-			m_MouseLook.Init(transform , m_Camera.transform);
+            m_MouseLook.Init(transform, m_Camera.transform);
+            EventBroadcaster.Instance.AddObserver(EventNames.OPEN_START_MENU, this.UnlockCursor);
+            EventBroadcaster.Instance.AddObserver(EventNames.GAME_START, this.LockCursor);
+        }
+        private void OnDestroy()
+        {
+            EventBroadcaster.Instance.RemoveObserver(EventNames.OPEN_START_MENU);
+            EventBroadcaster.Instance.RemoveObserver(EventNames.GAME_START);
+        }
+        private void LockCursor()
+        {
+            m_MouseLook.LockCursor();
+        }
+        private void UnlockCursor()
+        {
+            m_MouseLook.UnlockCursor();
         }
 
 

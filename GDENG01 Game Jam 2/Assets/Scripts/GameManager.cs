@@ -5,24 +5,36 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject StartScreenMenu;
     [SerializeField] GameObject CreditsScreen;
     [SerializeField] GameObject PauseScreen;
+    [SerializeField] GameObject FirstPersonCameraController;
     private bool isPaused = false;
-    bool isStartScreenOpen = true;
+    private bool isStartScreenOpen = true;
+    private bool isGameStart = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        CloseGame();
+        OpenStartScreenMenu();
+        EventBroadcaster.Instance.AddObserver(EventNames.OPEN_START_MENU, this.OpenStartScreenMenu);
+        EventBroadcaster.Instance.AddObserver(EventNames.GAME_START, this.StartGame);
+    }
+
+    void onDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver(EventNames.OPEN_START_MENU);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.GAME_START);
     }
 
     public void CloseStartScreenMenu()
     {
-        StartScreenMenu.SetActive(false);
-        CloseCreditsScreen();
         isStartScreenOpen = false;
+        StartScreenMenu.SetActive(isStartScreenOpen);
+        CloseCreditsScreen();
     }
     public void OpenStartScreenMenu()
     {
-        StartScreenMenu.SetActive(true);
         isStartScreenOpen = true;
+        StartScreenMenu.SetActive(isStartScreenOpen);
+        CloseGame();
     }
     public void CloseCreditsScreen()
     {
@@ -44,6 +56,22 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1.0f;
         }
     }
+    public void StartGame()
+    {
+        SetActiveGame(true);
+        CloseStartScreenMenu();
+    }
+    public void CloseGame()
+    {
+        SetActiveGame(false);
+        isPaused = false;
+    }
+    private void SetActiveGame(bool val)
+    {
+        isGameStart = val;
+        FirstPersonCameraController.SetActive(isGameStart);
+    }
+
     private void TogglePause()
     {
         isPaused = !isPaused;
@@ -53,6 +81,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // During Gameplay
         if (!isStartScreenOpen && Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
@@ -60,8 +89,7 @@ public class GameManager : MonoBehaviour
 
         if (!isStartScreenOpen && Input.GetKeyDown(KeyCode.X))
         {
-            isStartScreenOpen = true;
-            OpenStartScreenMenu();
+            EventBroadcaster.Instance.PostEvent(EventNames.OPEN_START_MENU);
         }
     }
 }

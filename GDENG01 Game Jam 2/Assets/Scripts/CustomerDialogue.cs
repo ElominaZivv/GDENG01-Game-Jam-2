@@ -13,10 +13,17 @@ public class CustomerDialogue : MonoBehaviour
     {
         DialogueBox.SetActive(false);
 
+        // Events for each possible Dialogue
+        EventBroadcaster.Instance.AddObserver("AskReading", AskReading);
         EventBroadcaster.Instance.AddObserver("RightAnswer", RightAnswer);
         EventBroadcaster.Instance.AddObserver("WrongAnswer", WrongAnswer);
     }
-    
+    void AskReading()
+    {
+        DialogueBox.SetActive(true);
+        TextScript.text = "I would like to ask for a reading on my past present and future";
+    }
+
     void RightAnswer()
     {
         DialogueBox.SetActive(true);
@@ -32,18 +39,18 @@ public class CustomerDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TextScript.text = "I would like to ask for a reading on my past present and future";
-            DialogueBox.SetActive(true);
-
-        }
+        // Press E to Close Dialogue
         if (Input.GetKeyDown(KeyCode.E))
         {
             DialogueBox.SetActive(false);
         }
+    }
 
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver("AskReading");
+        EventBroadcaster.Instance.RemoveObserver("RightAnswer");
+        EventBroadcaster.Instance.RemoveObserver("WrongAnswer");
     }
 
 }

@@ -16,7 +16,7 @@ public class TarotCardController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        EventBroadcaster.Instance.AddObserver("FlipCard", FlipCard);
     }
 
     // Update is called once per frame
@@ -38,11 +38,12 @@ public class TarotCardController : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (cardRandomizer.CardNumber < 3)
-        {
+        isFlipped = !isFlipped;   
+    }
+
+    void FlipCard()
+    {
+        if (cardRandomizer.Card1.id == id || cardRandomizer.Card2.id == id || cardRandomizer.Card3.id == id)
             isFlipped = !isFlipped;
-            cardRandomizer.CardID = id;
-            EventBroadcaster.Instance.PostEvent("CardChosen");
-        }    
     }
 }

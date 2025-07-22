@@ -1,7 +1,9 @@
+using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.VolumeComponent;
 
 public class ChoiceManager : MonoBehaviour
 {
@@ -21,11 +23,15 @@ public class ChoiceManager : MonoBehaviour
     private TarotCardController Card2;
     private TarotCardController Card3;
 
+    private TarotCardController WrongCard1;
+    private TarotCardController WrongCard2;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         EventBroadcaster.Instance.AddObserver("ActivateChoices", ActivateChoices);
         EventBroadcaster.Instance.AddObserver("DeactivateChoices", DeactivateChoices);
+        EventBroadcaster.Instance.AddObserver("SetChoices", SetChoices);
 
         Choices.SetActive(false);
         NewAnswer();
@@ -114,12 +120,17 @@ public class ChoiceManager : MonoBehaviour
         {
             // Reset Which Question We are on
             QuestionNumber = 0;
+
+            // Resets things
+            EventBroadcaster.Instance.PostEvent("DeactivateChoices");
+            EventBroadcaster.Instance.PostEvent("ResetLight");
+            EventBroadcaster.Instance.PostEvent("Customer");
         }
     }
 
     private void NewAnswer()
     {
-        CorrectAnswer = Random.Range(0, 3);
+        CorrectAnswer = UnityEngine.Random.Range(0, 3);
     }
 
     private void CheckAnswer()
@@ -133,14 +144,41 @@ public class ChoiceManager : MonoBehaviour
         if (CorrectAnswer == 0)
         {
             ButtonText1.text = Card1.upright_description;
+            GenerateIndexes(Card1.id);
+            ButtonText2.text = WrongCard1.upright_description;
+            ButtonText3.text = WrongCard2.upright_description;
         }
         else if (CorrectAnswer == 1)
         {
             ButtonText2.text = Card2.upright_description;
+            GenerateIndexes(Card2.id);
+            ButtonText1.text = WrongCard1.upright_description;
+            ButtonText3.text = WrongCard2.upright_description;
         }
         else if (CorrectAnswer == 2)
         {
             ButtonText3.text = Card3.upright_description;
+            GenerateIndexes(Card3.id);
+            ButtonText1.text = WrongCard1.upright_description;
+            ButtonText2.text = WrongCard2.upright_description;
         }
+    }
+
+    private void GenerateIndexes(int input)
+    {
+        int index1, index2;
+
+        do
+        {
+            index1 = UnityEngine.Random.Range(0, 22);
+        } while (index1 == input);
+
+        do
+        {
+            index2 = UnityEngine.Random.Range(0, 22);
+        } while (index2 == input || index2 == index1);
+
+        WrongCard1 = cardRandomizer.Deck[index1].GetComponent<TarotCardController>();
+        WrongCard2 = cardRandomizer.Deck[index2].GetComponent<TarotCardController>();
     }
 }

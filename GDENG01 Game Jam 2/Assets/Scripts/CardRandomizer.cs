@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class CardRandomizer : MonoBehaviour
 {
-    [SerializeField] GameObject[] Deck;
+    [SerializeField] public GameObject[] Deck;
 
     [SerializeField] TextMeshProUGUI ButtonText1;
     [SerializeField] TextMeshProUGUI ButtonText2;
@@ -37,7 +37,9 @@ public class CardRandomizer : MonoBehaviour
     }
     void RestartCards()
     {
+        EventBroadcaster.Instance.PostEvent("FlipCard");
         AssignCards();
+        EventBroadcaster.Instance.PostEvent("FlipCard");
     }
 
     // Update is called once per frame

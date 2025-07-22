@@ -78,7 +78,7 @@ public class GameplayLight : MonoBehaviour
         data.light.intensity = data.maxIntensity;
         tableLight.intensity = tableLightData.maxIntensity;
 
-        EventBroadcaster.Instance.PostEvent("dialouge"); //goes to dialogue and gameplay        
+        EventBroadcaster.Instance.PostEvent("AskReading"); //goes to dialogue and gameplay        
         // EventBroadcaster.Instance.PostEvent("ResetLight"); //getrid once gameplay loop is added
     }
 

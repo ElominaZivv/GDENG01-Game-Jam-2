@@ -6586,7 +6586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 926161311}
   m_Layer: 0
-  m_Name: GAME STUFFS
+  m_Name: GAME MANAGER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7128,7 +7128,7 @@ GameObject:
   - component: {fileID: 1006818126}
   - component: {fileID: 1006818125}
   m_Layer: 0
-  m_Name: GAME MANAGER
+  m_Name: MENU MANAGER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

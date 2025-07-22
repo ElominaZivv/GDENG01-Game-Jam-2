@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
     [SerializeField] GameObject StartScreenMenu;
     [SerializeField] GameObject CreditsScreen;

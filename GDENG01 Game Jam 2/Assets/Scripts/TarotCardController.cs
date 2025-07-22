@@ -26,20 +26,20 @@ public class TarotCardController : MonoBehaviour
         animator.SetBool("isFlipped", isFlipped);
     }
 
-    void OnMouseOver()
-    {
-        isSelected = true;
-    }
+    // void OnMouseOver()
+    // {
+    //     isSelected = true;
+    // }
 
-    void OnMouseExit()
-    {
-        isSelected = false;
-    }
+    // void OnMouseExit()
+    // {
+    //     isSelected = false;
+    // }
 
-    void OnMouseDown()
-    {
-        isFlipped = !isFlipped;   
-    }
+    // void OnMouseDown()
+    // {
+    //     isFlipped = !isFlipped;   
+    // }
 
     void FlipCard()
     {

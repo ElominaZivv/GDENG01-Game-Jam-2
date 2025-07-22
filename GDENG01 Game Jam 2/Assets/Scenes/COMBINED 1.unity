@@ -13964,6 +13964,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 937935109920851613, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
+      propertyPath: m_AspectMode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 937935109920851613, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
+      propertyPath: m_AspectRatio
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 988376735079310042, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -14452,7 +14460,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8474003566306528694, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474003566306528694, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474003566306528694, guid: 332051913a379ca4cbba58b554f769eb, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8648604926985567045, guid: 332051913a379ca4cbba58b554f769eb, type: 3}

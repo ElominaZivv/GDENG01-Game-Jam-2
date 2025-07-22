@@ -8,6 +8,9 @@ using System.Collections;
 
 public class ChoiceManager : MonoBehaviour
 {
+    [SerializeField] Sprite[] Images;
+    [SerializeField] Image image;
+
     [SerializeField] TextMeshProUGUI ButtonText1;
     [SerializeField] TextMeshProUGUI ButtonText2;
     [SerializeField] TextMeshProUGUI ButtonText3;
@@ -106,16 +109,19 @@ public class ChoiceManager : MonoBehaviour
         {
             // Set text to know Which Card
             CardDisplay.text = "Past: " + Card1.name;
+            image.sprite = Images[Card1.id];
         }
         else if (QuestionNumber == 1)
         {
             // Set text to know Which Card
             CardDisplay.text = "Present: " + Card2.name;
+            image.sprite = Images[Card2.id];
         }
         else if (QuestionNumber == 2)
         {
             // Set text to know Which Card
             CardDisplay.text = "Future: " + Card3.name;
+            image.sprite = Images[Card3.id];
         }
         else
         {

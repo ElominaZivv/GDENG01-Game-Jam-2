@@ -7,6 +7,7 @@ public class CustomerDialogue : MonoBehaviour
 
     [SerializeField] GameObject DialogueBox;
     [SerializeField] TextMeshProUGUI TextScript;
+    [SerializeField] ChoiceManager choiceManager;
 
     private bool AskingReading = false;
     private bool CheckingAnswer = false;
@@ -56,10 +57,12 @@ public class CustomerDialogue : MonoBehaviour
                 EventBroadcaster.Instance.PostEvent("ActivateChoices");
                 EventBroadcaster.Instance.PostEvent("SetChoices");
                 AskingReading = false;
+
             }
             if (CheckingAnswer)
             {
-                EventBroadcaster.Instance.PostEvent("ActivateChoices");
+                Debug.Log(choiceManager.QuestionNumber);
+                if (choiceManager.QuestionNumber != 0) EventBroadcaster.Instance.PostEvent("ActivateChoices");
                 CheckingAnswer = false;
             }
         }

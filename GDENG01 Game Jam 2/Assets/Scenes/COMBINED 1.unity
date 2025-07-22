@@ -1078,6 +1078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 1003193177}
   TextScript: {fileID: 1415895453}
+  choiceManager: {fileID: 1753850290}
 --- !u!4 &162887752
 Transform:
   m_ObjectHideFlags: 0
@@ -6641,6 +6642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ac16dfa9b848d48b37d19adf2d44e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeToFlicker: 3
 --- !u!1001 &947206205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12813,6 +12815,7 @@ MonoBehaviour:
   CardDisplay: {fileID: 163348389}
   Choices: {fileID: 165044594}
   cardRandomizer: {fileID: 626438658}
+  QuestionNumber: 0
 --- !u!4 &1753850291
 Transform:
   m_ObjectHideFlags: 0

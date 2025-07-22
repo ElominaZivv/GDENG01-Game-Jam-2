@@ -22,7 +22,7 @@ public class GameplayLight : MonoBehaviour
 
     private void Start()
     {
-
+        gameObject.SetActive(false);
         tableLightData.light = tableLight;
         tableLightData.maxIntensity = tableLight.intensity;
         tableLight.intensity = 0f;
@@ -44,7 +44,7 @@ public class GameplayLight : MonoBehaviour
 
     void StartGameLights()
     {
-
+        gameObject.SetActive(true);
         if (customers.Count == 0) return;
 
         int customerIndex = r.Next(0, customers.Count);
@@ -54,6 +54,7 @@ public class GameplayLight : MonoBehaviour
 
     void ResetLight()
     {
+        gameObject.SetActive(false);
         currentLight.light.intensity = 0f;
         tableLight.intensity = 0f;
     }
@@ -62,6 +63,8 @@ public class GameplayLight : MonoBehaviour
     {
         float timer = 0f;
         data.light.intensity = 0f;
+
+        yield return new WaitForSeconds(1);
 
         while (timer < fadeDuration)
         {
@@ -76,6 +79,7 @@ public class GameplayLight : MonoBehaviour
         tableLight.intensity = tableLightData.maxIntensity;
 
         EventBroadcaster.Instance.PostEvent("dialouge"); //goes to dialogue and gameplay        
+        EventBroadcaster.Instance.PostEvent("ResetLight"); //getrid once gameplay loop is added
     }
 
     private void OnDestroy()

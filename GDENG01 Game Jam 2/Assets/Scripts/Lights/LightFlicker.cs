@@ -19,6 +19,7 @@ public class LightFlicker : MonoBehaviour
     }
     void Start()
     {
+        gameObject.SetActive(true);
         r = new System.Random();
 
         foreach (Transform child in transform)
@@ -33,7 +34,7 @@ public class LightFlicker : MonoBehaviour
             }
         }
 
-        StartCoroutine(Flicker());
+        StartCoroutine(Flicker()); //need to make this eventbroadcaster
     }
 
     IEnumerator Flicker()
@@ -71,5 +72,6 @@ public class LightFlicker : MonoBehaviour
                 data.light.intensity = data.maxIntensity;
             }
         }
+        StartCoroutine(Flicker()); //Get rid once gameplay is added
     }
 }

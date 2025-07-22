@@ -61,7 +61,6 @@ public class CustomerDialogue : MonoBehaviour
             }
             if (CheckingAnswer)
             {
-                Debug.Log(choiceManager.QuestionNumber);
                 if (choiceManager.QuestionNumber != 0) EventBroadcaster.Instance.PostEvent("ActivateChoices");
                 CheckingAnswer = false;
             }

@@ -16,6 +16,7 @@ public class LightFlicker : MonoBehaviour
     private void Awake()
     {
         EventBroadcaster.Instance.AddObserver("ResetLight", this.ResetLight);
+        EventBroadcaster.Instance.AddObserver("StartFlicker", this.StartFlicker);
     }
     void Start()
     {
@@ -34,9 +35,13 @@ public class LightFlicker : MonoBehaviour
             }
         }
 
-        StartCoroutine(Flicker()); //need to make this eventbroadcaster
+        StartCoroutine(Flicker()); //get rid once there is gameplay
     }
 
+    void StartFlicker()
+    {
+        StartCoroutine(Flicker());
+    }
     IEnumerator Flicker()
     {
         float timer = 0f;
@@ -73,5 +78,11 @@ public class LightFlicker : MonoBehaviour
             }
         }
         StartCoroutine(Flicker()); //Get rid once gameplay is added
+    }
+
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver("StartFlicker");
+        EventBroadcaster.Instance.RemoveObserver("ResetLight");
     }
 }

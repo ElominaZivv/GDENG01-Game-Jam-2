@@ -85,5 +85,6 @@ public class GameplayLight : MonoBehaviour
     private void OnDestroy()
     {
         EventBroadcaster.Instance.RemoveObserver("Customer");
+        EventBroadcaster.Instance.RemoveObserver("ResetLight");
     }
 }

@@ -33,7 +33,7 @@ public class CustomerDialogue : MonoBehaviour
     {
         EventBroadcaster.Instance.PostEvent("DeactivateChoices");
         DialogueBox.SetActive(true);
-        TextScript.text = "Wow! That is totally me. Slay!";
+        TextScript.text = "Wow! That does sound like me!";
         CheckingAnswer = true;
     }
 

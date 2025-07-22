@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.Rendering.VolumeComponent;
+using System.Collections;
 
 public class ChoiceManager : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class ChoiceManager : MonoBehaviour
 
     private int SelectedAnswer = 0;
     private int CorrectAnswer;
-    private int QuestionNumber;
+    public int QuestionNumber;
 
     private TarotCardController Card1;
     private TarotCardController Card2;
@@ -124,8 +125,18 @@ public class ChoiceManager : MonoBehaviour
             // Resets things
             EventBroadcaster.Instance.PostEvent("DeactivateChoices");
             EventBroadcaster.Instance.PostEvent("ResetLight");
-            EventBroadcaster.Instance.PostEvent("Customer");
+            EventBroadcaster.Instance.PostEvent("Restart");
+
+            // 5 second Delay here
+            StartCoroutine(DelayedAction());
         }
+    }
+
+    IEnumerator DelayedAction()
+    {
+        yield return new WaitForSeconds(5f);
+
+        EventBroadcaster.Instance.PostEvent("Customer");
     }
 
     private void NewAnswer()

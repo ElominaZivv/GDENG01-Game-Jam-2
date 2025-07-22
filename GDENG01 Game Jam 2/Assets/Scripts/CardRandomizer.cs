@@ -39,7 +39,6 @@ public class CardRandomizer : MonoBehaviour
     {
         EventBroadcaster.Instance.PostEvent("FlipCard");
         AssignCards();
-        EventBroadcaster.Instance.PostEvent("FlipCard");
     }
 
     // Update is called once per frame
@@ -71,7 +70,7 @@ public class CardRandomizer : MonoBehaviour
         ChosenCards[1] = Deck[CardIndex2];
         ChosenCards[2] = Deck[CardIndex3];
         FlipCards();
-        EventBroadcaster.Instance.PostEvent("ActivateChoices");
+        // EventBroadcaster.Instance.PostEvent("ActivateChoices");
     }
 
     private void FlipCards() 

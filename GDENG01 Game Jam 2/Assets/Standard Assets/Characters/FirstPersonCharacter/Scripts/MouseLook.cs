@@ -93,7 +93,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // {
             //     m_cursorIsLocked = true;
             // }
-
+            if (Input.GetMouseButtonUp(0))
+            {
+                m_cursorIsLocked = true;
+            }
+            
             if (m_cursorIsLocked)
             {
                 Cursor.lockState = CursorLockMode.Locked;

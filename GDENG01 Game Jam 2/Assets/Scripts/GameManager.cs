@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject StartScreenMenu;
     [SerializeField] GameObject CreditsScreen;
     [SerializeField] GameObject PauseScreen;
-    [SerializeField] GameObject FirstPersonCameraController;
+    [SerializeField] GameObject Game;
     private bool isPaused = false;
     private bool isStartScreenOpen = true;
     private bool isGameStart = false;
@@ -55,21 +55,29 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1.0f;
         }
+        Parameters pauseVal = new Parameters();
+        pauseVal.PutExtra("PauseVal", isPaused);
+        EventBroadcaster.Instance.PostEvent(EventNames.GAME_PAUSE, pauseVal);
+    }
+    public void ClickStartGame()
+    {
+        EventBroadcaster.Instance.PostEvent(EventNames.GAME_START);
     }
     public void StartGame()
     {
         SetActiveGame(true);
         CloseStartScreenMenu();
+        SetPause(false);
     }
     public void CloseGame()
     {
         SetActiveGame(false);
-        isPaused = false;
+        SetPause(false);
     }
     private void SetActiveGame(bool val)
     {
         isGameStart = val;
-        FirstPersonCameraController.SetActive(isGameStart);
+        Game.SetActive(isGameStart);
     }
 
     private void TogglePause()
@@ -77,15 +85,24 @@ public class GameManager : MonoBehaviour
         isPaused = !isPaused;
         PauseGame();
     }
+    private void SetPause(bool val)
+    {
+        isPaused = val;
+        PauseGame();
+    }
 
     // Update is called once per frame
-    void Update()
+    void Update()   
     {
-        // During Gameplay
-        if (!isStartScreenOpen && Input.GetKeyDown(KeyCode.Escape))
+        if (!isStartScreenOpen && isPaused && Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePause();
+            EventBroadcaster.Instance.PostEvent(EventNames.GAME_RESUME);
         }
+        // During Gameplay
+            if (!isStartScreenOpen && Input.GetKeyDown(KeyCode.Escape))
+            {
+                TogglePause();
+            }
 
         if (!isStartScreenOpen && Input.GetKeyDown(KeyCode.X))
         {

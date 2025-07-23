@@ -41,7 +41,7 @@ public class CustomerDialogue : MonoBehaviour
     {
         EventBroadcaster.Instance.PostEvent("DeactivateChoices");
         DialogueBox.SetActive(true);
-        TextScript.text = "What are you saying? That's not me!";
+        TextScript.text = "What are you saying? That is not me!";
         CheckingAnswer = true;
     }
 

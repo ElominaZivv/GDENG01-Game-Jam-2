@@ -40,10 +40,18 @@ public class ChoiceManager : MonoBehaviour
         Choices.SetActive(false);
         NewAnswer();
     }
+    void onDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver("ActivateChoices");
+        EventBroadcaster.Instance.RemoveObserver("DeactivateChoices");
+        EventBroadcaster.Instance.RemoveObserver("SetChoices");
+    }
 
     void ActivateChoices()
     {
         Choices.SetActive(true);
+        NewAnswer();
+        SetChoices();
     }
 
     void DeactivateChoices()
@@ -54,6 +62,7 @@ public class ChoiceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         // Assign Cards for each Question
         Card1 = cardRandomizer.ChosenCards[0].GetComponent<TarotCardController>();
@@ -64,44 +73,42 @@ public class ChoiceManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SelectedAnswer = 0;
+            // Check if Correct
+            CheckAnswer();
+            NewAnswer();
 
             if (Choices.activeSelf)
             {
                 SetChoices();
-                QuestionNumber++;
             }
-
-            // Check if Correct
-            CheckAnswer();
-            NewAnswer();
+            QuestionNumber++;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             SelectedAnswer = 1;
+            // Check if Correct
+            CheckAnswer();
+            NewAnswer();
 
             if (Choices.activeSelf)
             {
                 SetChoices();
-                QuestionNumber++;
             }
-
-            // Check if Correct
-            CheckAnswer();
-            NewAnswer();
+            QuestionNumber++;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             SelectedAnswer = 2;
+            // Check if Correct
+            CheckAnswer();
+
+            NewAnswer();
 
             if (Choices.activeSelf)
             {
                 SetChoices();
-                QuestionNumber++;
             }
-
-            // Check if Correct
-            CheckAnswer();
-            NewAnswer();
+            QuestionNumber++;
         }
 
         // To know which Question we are On
@@ -157,24 +164,33 @@ public class ChoiceManager : MonoBehaviour
 
     private void SetChoices()
     {
+        // Get the correct card of the current question number
+        TarotCardController CorrectCard = cardRandomizer.ChosenCards[QuestionNumber].GetComponent<TarotCardController>();
+
         if (CorrectAnswer == 0)
         {
-            ButtonText1.text = Card1.upright_description;
-            GenerateIndexes(Card1.id);
+            // ButtonText1.text = Card1.upright_description;
+            // GenerateIndexes(Card1.id);
+            ButtonText1.text = CorrectCard.upright_description;
+            GenerateIndexes(CorrectCard.id);
             ButtonText2.text = WrongCard1.upright_description;
             ButtonText3.text = WrongCard2.upright_description;
         }
         else if (CorrectAnswer == 1)
         {
-            ButtonText2.text = Card2.upright_description;
-            GenerateIndexes(Card2.id);
+            // ButtonText2.text = Card2.upright_description;
+            // GenerateIndexes(Card2.id);
+            ButtonText2.text = CorrectCard.upright_description;
+            GenerateIndexes(CorrectCard.id);
             ButtonText1.text = WrongCard1.upright_description;
             ButtonText3.text = WrongCard2.upright_description;
         }
         else if (CorrectAnswer == 2)
         {
-            ButtonText3.text = Card3.upright_description;
-            GenerateIndexes(Card3.id);
+            // ButtonText3.text = Card3.upright_description;
+            // GenerateIndexes(Card3.id);
+            ButtonText3.text = CorrectCard.upright_description;
+            GenerateIndexes(CorrectCard.id);
             ButtonText1.text = WrongCard1.upright_description;
             ButtonText2.text = WrongCard2.upright_description;
         }

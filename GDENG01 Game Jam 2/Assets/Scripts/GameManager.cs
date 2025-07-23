@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
             if (internalClock >= TimeToFlicker && !TarotReadingStart)
             {
                 EventBroadcaster.Instance.PostEvent("StartFlicker");
+                EventBroadcaster.Instance.PostEvent("SetChoices");
                 TarotReadingStart = true;
             }
         }

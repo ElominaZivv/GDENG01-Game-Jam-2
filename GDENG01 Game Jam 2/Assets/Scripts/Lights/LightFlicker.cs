@@ -64,6 +64,7 @@ public class LightFlicker : MonoBehaviour
         gameObject.SetActive(false);
         EventBroadcaster.Instance.PostEvent("Customer");
         EventBroadcaster.Instance.PostEvent("spread");
+        EventBroadcaster.Instance.PostEvent("FlipCard");
     }
 
     void ResetLight()

@@ -37,7 +37,6 @@ public class CardRandomizer : MonoBehaviour
     }
     void RestartCards()
     {
-        EventBroadcaster.Instance.PostEvent("FlipCard");
         AssignCards();
     }
 
@@ -77,7 +76,6 @@ public class CardRandomizer : MonoBehaviour
         Card1 = ChosenCards[0].GetComponent<TarotCardController>();
         Card2 = ChosenCards[1].GetComponent<TarotCardController>();
         Card3 = ChosenCards[2].GetComponent<TarotCardController>();
-        EventBroadcaster.Instance.PostEvent("FlipCard");
     }
 
     private void OnDestroy()

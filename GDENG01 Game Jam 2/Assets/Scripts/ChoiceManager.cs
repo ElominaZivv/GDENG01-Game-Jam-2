@@ -40,13 +40,6 @@ public class ChoiceManager : MonoBehaviour
         Choices.SetActive(false);
         NewAnswer();
     }
-    void onDestroy()
-    {
-        EventBroadcaster.Instance.RemoveObserver("ActivateChoices");
-        EventBroadcaster.Instance.RemoveObserver("DeactivateChoices");
-        EventBroadcaster.Instance.RemoveObserver("SetChoices");
-    }
-
     void ActivateChoices()
     {
         Choices.SetActive(true);
@@ -139,6 +132,7 @@ public class ChoiceManager : MonoBehaviour
             EventBroadcaster.Instance.PostEvent("DeactivateChoices");
             EventBroadcaster.Instance.PostEvent("ResetLight");
             EventBroadcaster.Instance.PostEvent("Restart");
+            EventBroadcaster.Instance.PostEvent("ResetCard");
 
             // 5 second Delay here
             StartCoroutine(DelayedAction());
@@ -187,8 +181,6 @@ public class ChoiceManager : MonoBehaviour
         }
         else if (CorrectAnswer == 2)
         {
-            // ButtonText3.text = Card3.upright_description;
-            // GenerateIndexes(Card3.id);
             ButtonText3.text = CorrectCard.upright_description;
             GenerateIndexes(CorrectCard.id);
             ButtonText1.text = WrongCard1.upright_description;
@@ -213,4 +205,12 @@ public class ChoiceManager : MonoBehaviour
         WrongCard1 = cardRandomizer.Deck[index1].GetComponent<TarotCardController>();
         WrongCard2 = cardRandomizer.Deck[index2].GetComponent<TarotCardController>();
     }
+
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver("ActivateChoices");
+        EventBroadcaster.Instance.RemoveObserver("DeactivateChoices");
+        EventBroadcaster.Instance.RemoveObserver("SetChoices");
+    }
+
 }

@@ -17,6 +17,7 @@ public class TarotCardController : MonoBehaviour
     void Start()
     {
         EventBroadcaster.Instance.AddObserver("FlipCard", FlipCard);
+        EventBroadcaster.Instance.AddObserver("ResetCard", ResetCard);
     }
 
     // Update is called once per frame
@@ -26,24 +27,19 @@ public class TarotCardController : MonoBehaviour
         animator.SetBool("isFlipped", isFlipped);
     }
 
-    // void OnMouseOver()
-    // {
-    //     isSelected = true;
-    // }
-
-    // void OnMouseExit()
-    // {
-    //     isSelected = false;
-    // }
-
-    // void OnMouseDown()
-    // {
-    //     isFlipped = !isFlipped;   
-    // }
-
     void FlipCard()
     {
         if (cardRandomizer.Card1.id == id || cardRandomizer.Card2.id == id || cardRandomizer.Card3.id == id)
             isFlipped = !isFlipped;
+    }
+
+    void ResetCard()
+    {
+        isFlipped = true;
+    }
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver("FlipCard");
+        EventBroadcaster.Instance.RemoveObserver("ResetCard");
     }
 }

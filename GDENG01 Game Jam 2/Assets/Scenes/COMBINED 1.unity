@@ -1475,7 +1475,7 @@ Transform:
   m_GameObject: {fileID: 196631392}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 9.539999, z: 4.3100014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1514,8 +1514,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1000
+  m_Color: {r: 0.5253744, g: 0, b: 1, a: 1}
+  m_Intensity: 1250
   m_Range: 50
   m_SpotAngle: 55.738594
   m_InnerSpotAngle: 35.841293
@@ -3421,7 +3421,7 @@ Transform:
   m_GameObject: {fileID: 512847989}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 9.54, z: 4.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3460,8 +3460,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1000
+  m_Color: {r: 0.5253744, g: 0, b: 1, a: 1}
+  m_Intensity: 1250
   m_Range: 50
   m_SpotAngle: 55.738594
   m_InnerSpotAngle: 35.841293
@@ -4479,8 +4479,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255615
-  m_fontColor: {r: 1, g: 1, b: 0, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6065,10 +6065,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7169812, g: 0, b: 0.38782623, a: 1}
+    m_NormalColor: {r: 0.72955966, g: 0.6441763, b: 0.5712589, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0.5902195, a: 1}
-    m_PressedColor: {r: 0.14994846, g: 0.006823262, b: 0.4339623, a: 1}
-    m_SelectedColor: {r: 1, g: 0, b: 0.5921569, a: 1}
+    m_PressedColor: {r: 0.1457062, g: 0.08419361, b: 0.27044016, a: 1}
+    m_SelectedColor: {r: 0.7484276, g: 0, b: 0.2752076, a: 1}
     m_DisabledColor: {r: 0.20981644, g: 0.11587748, b: 0.3962264, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -6108,8 +6108,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a4ecc99daf7a8ed47891bc2452a9e5b0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6742,7 +6742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &926161311
 Transform:
   m_ObjectHideFlags: 0
@@ -7046,8 +7046,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255615
-  m_fontColor: {r: 1, g: 1, b: 0, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10519,7 +10519,7 @@ Transform:
   m_GameObject: {fileID: 1463505577}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 9.539999, z: 4.3100014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10558,8 +10558,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1000
+  m_Color: {r: 0.5253744, g: 0, b: 1, a: 1}
+  m_Intensity: 1250
   m_Range: 50
   m_SpotAngle: 55.738594
   m_InnerSpotAngle: 35.841293
@@ -10884,10 +10884,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7169812, g: 0, b: 0.38782623, a: 1}
+    m_NormalColor: {r: 0.72955966, g: 0.6441763, b: 0.5712589, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0.5902195, a: 1}
-    m_PressedColor: {r: 0.14994846, g: 0.006823262, b: 0.4339623, a: 1}
-    m_SelectedColor: {r: 1, g: 0, b: 0.5921569, a: 1}
+    m_PressedColor: {r: 0.1457062, g: 0.08419361, b: 0.27044016, a: 1}
+    m_SelectedColor: {r: 0.7484276, g: 0, b: 0.2752076, a: 1}
     m_DisabledColor: {r: 0.20981644, g: 0.11587748, b: 0.3962264, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10927,8 +10927,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a4ecc99daf7a8ed47891bc2452a9e5b0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -11201,8 +11201,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255615
-  m_fontColor: {r: 1, g: 1, b: 0, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13731,7 +13731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.42767292, g: 0, b: 0.20109123, a: 1}
+  m_Color: {r: 0.10782004, g: 0.025157219, b: 0.1509434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13783,7 +13783,7 @@ Transform:
   m_GameObject: {fileID: 1864889647}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 9.539999, z: 4.3100014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13822,8 +13822,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1000
+  m_Color: {r: 0.5253744, g: 0, b: 1, a: 1}
+  m_Intensity: 1250
   m_Range: 50
   m_SpotAngle: 55.738594
   m_InnerSpotAngle: 35.841293
@@ -15076,7 +15076,7 @@ Transform:
   m_GameObject: {fileID: 1914728644}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 9.539999, z: 4.3100014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15115,8 +15115,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1000
+  m_Color: {r: 0.5253744, g: 0, b: 1, a: 1}
+  m_Intensity: 1250
   m_Range: 50
   m_SpotAngle: 55.738594
   m_InnerSpotAngle: 35.841293
@@ -16039,10 +16039,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7169812, g: 0, b: 0.38782623, a: 1}
+    m_NormalColor: {r: 0.72955966, g: 0.6441763, b: 0.5712589, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0.5902195, a: 1}
-    m_PressedColor: {r: 0.14994846, g: 0.006823262, b: 0.4339623, a: 1}
-    m_SelectedColor: {r: 1, g: 0, b: 0.5921569, a: 1}
+    m_PressedColor: {r: 0.1457062, g: 0.08419361, b: 0.27044016, a: 1}
+    m_SelectedColor: {r: 0.7484276, g: 0, b: 0.2752076, a: 1}
     m_DisabledColor: {r: 0.20981644, g: 0.11587748, b: 0.3962264, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -16082,8 +16082,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a4ecc99daf7a8ed47891bc2452a9e5b0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -16670,13 +16670,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146126523}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.023298033, y: 0, z: 0, w: 0.99972856}
+  m_LocalPosition: {x: 0, y: 9.539999, z: 4.3100014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 635549579}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.67, y: 0, z: 0}
 --- !u!114 &2146126525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16710,8 +16710,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1000
+  m_Color: {r: 0.5253744, g: 0, b: 1, a: 1}
+  m_Intensity: 1250
   m_Range: 50
   m_SpotAngle: 55.738594
   m_InnerSpotAngle: 35.841293

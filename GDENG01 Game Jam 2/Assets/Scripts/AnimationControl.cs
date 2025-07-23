@@ -18,15 +18,15 @@ public class AnimationControl : MonoBehaviour
 
     void toggleSpread()
     {
-        spread = !spread;
-        close = !close;
+        spread = true;
+        close = false;
         animator.SetBool("SpreadOut", spread);
         animator.SetBool("CloseDeck", close);
     }
     void toggleClose()
     {
-        spread = !spread;
-        close = !close;
+        spread = false;
+        close = true;
         animator.SetBool("SpreadOut", spread);
         animator.SetBool("CloseDeck", close);
     }

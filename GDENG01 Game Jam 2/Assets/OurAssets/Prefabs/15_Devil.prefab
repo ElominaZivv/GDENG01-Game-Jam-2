@@ -17,6 +17,10 @@ PrefabInstance:
       value: The Devil
       objectReference: {fileID: 0}
     - target: {fileID: 907583670162137530, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
+      propertyPath: tarotName
+      value: The Devil
+      objectReference: {fileID: 0}
+    - target: {fileID: 907583670162137530, guid: 711c67eb0ddeeac4fb70e882509b5f79, type: 3}
       propertyPath: upright_description
       value: Revalation of faults
       objectReference: {fileID: 0}

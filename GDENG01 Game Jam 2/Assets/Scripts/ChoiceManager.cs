@@ -108,19 +108,19 @@ public class ChoiceManager : MonoBehaviour
         if (QuestionNumber == 0)
         {
             // Set text to know Which Card
-            CardDisplay.text = "Past: " + Card1.name;
+            CardDisplay.text = "Past: " + Card1.GetTarotName();
             image.sprite = Images[Card1.id];
         }
         else if (QuestionNumber == 1)
         {
             // Set text to know Which Card
-            CardDisplay.text = "Present: " + Card2.name;
+            CardDisplay.text = "Present: " + Card2.GetTarotName();
             image.sprite = Images[Card2.id];
         }
         else if (QuestionNumber == 2)
         {
             // Set text to know Which Card
-            CardDisplay.text = "Future: " + Card3.name;
+            CardDisplay.text = "Future: " + Card3.GetTarotName();
             image.sprite = Images[Card3.id];
         }
         else

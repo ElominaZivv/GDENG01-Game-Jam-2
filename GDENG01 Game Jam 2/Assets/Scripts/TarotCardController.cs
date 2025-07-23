@@ -4,7 +4,7 @@ public class TarotCardController : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] public int id;
-    [SerializeField] public string name;
+    [SerializeField] public string tarotName;
     [SerializeField] public string upright_description;
     [SerializeField] public string reversed_description;
     [SerializeField] public bool upright = true;
@@ -37,6 +37,12 @@ public class TarotCardController : MonoBehaviour
     {
         isFlipped = true;
     }
+
+    public string GetTarotName()
+    {
+        return this.tarotName;
+    }
+
     private void OnDestroy()
     {
         EventBroadcaster.Instance.RemoveObserver("FlipCard");
